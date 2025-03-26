@@ -1,0 +1,23 @@
+# jenkins tutoral
+## hello
+````
+#!/bin/bash
+#this works only on linux or redhat
+sudo wget -O /etc/yum.repos.d/jenkins.repo \
+    https://pkg.jenkins.io/redhat-stable/jenkins.repo
+sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
+sudo yum upgrade
+# Add required dependencies for the jenkins package
+sudo yum install fontconfig java-17 -y
+sudo yum install jenkins -y
+sudo systemctl daemon-reload
+sudo sudo systemctl enable jenkins 
+sudo systemctl start jenkins 
+sudo systemctl status jenkins
+````
+launch a jenkins sever
+```commandline
+<publicIp>:8080
+```
+![img.png](img.png)
+
