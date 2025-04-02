@@ -1,0 +1,11 @@
+pipeline{ 
+    agent any
+
+    stages{ 
+           stage('git-checkout'){
+            steps{
+                git branch: 'development', url: 'https://github.com/Swathi971/demo.git'
+            }
+           } 
+        } 
+    }
